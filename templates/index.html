@@ -1,4 +1,4 @@
-要加入 qr_code.jpg 於index.html 。qr_code.jpg在static/images資料夾內<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -69,6 +69,29 @@
             color: #555;
         }
 
+        /* QR Code */
+        .qr-code {
+            text-align: center;
+            margin: 40px auto;
+            padding: 25px;
+            max-width: 250px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .qr-code img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .qr-code p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -124,6 +147,12 @@
         </div>
 
     </div>
+</div>
+
+<!-- QR Code -->
+<div class="qr-code">
+    <img src="{{ url_for('static', filename='images/qr_code.jpg') }}" alt="QR Code">
+    <p>掃描 QR Code 查看學習歷程</p>
 </div>
 
 <footer>
