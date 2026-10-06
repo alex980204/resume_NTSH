@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>寶可夢</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #f4f8f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #fbc02d, #ffeb3b);
+            color: #4a3500;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 38px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #e09b00;
+            margin-top: 0;
+        }
+
+        .intro p {
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .pokemon-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .pokemon-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pokemon-content {
+            padding: 20px;
+        }
+
+        .pokemon-content h3 {
+            color: #e09b00;
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+        .pokemon-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .pokemon-content ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .button-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #fbc02d;
+            color: #4a3500;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #f9a825;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 寶可夢</h1>
+    <p>探索寶可夢的世界，認識不同的寶可夢</p>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h2>什麼是寶可夢？</h2>
+
+        <p>
+            寶可夢是一個受到許多人喜愛的遊戲與娛樂作品。
+            玩家可以成為寶可夢訓練家，在不同的地區展開冒險，
+            收集各種寶可夢，並與牠們一起成長與對戰。
+        </p>
+    </section>
+
+
+    <section class="pokemon-grid">
+
+        <!-- 皮卡丘 -->
+        <div class="pokemon-card">
+
+            <img src="https://images.unsplash.com/photo-1606503153255-59d8b8b231a7?auto=format&fit=crop&w=800&q=80"
+                 alt="皮卡丘">
+
+            <div class="pokemon-content">
+
+                <h3>⚡ 皮卡丘</h3>
+
+                <p>
+                    皮卡丘是非常受歡迎的寶可夢，
+                    屬於電屬性，臉頰上的電氣袋可以儲存電力。
+                </p>
+
+                <ul>
+                    <li>屬性：⚡ 電</li>
+                    <li>特色：使用電擊攻擊</li>
+                    <li>夥伴：訓練家</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!-- 小火龍 -->
+        <div class="pokemon-card">
+
+            <img src="https://images.unsplash.com/photo-1613771404721-1f92d799e49f?auto=format&fit=crop&w=800&q=80"
+                 alt="小火龍">
+
+            <div class="pokemon-content">
+
+                <h3>🔥 小火龍</h3>
+
+                <p>
+                    小火龍是一隻火屬性的寶可夢，
+                    尾巴上的火焰是牠非常明顯的特徵。
+                </p>
+
+                <ul>
+                    <li>屬性：🔥 火</li>
+                    <li>特色：尾巴上的火焰</li>
+                    <li>進化：火恐龍 → 噴火龍</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!-- 傑尼龜 -->
+        <div class="pokemon-card">
+
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80"
+                 alt="傑尼龜">
+
+            <div class="pokemon-content">
+
+                <h3>💧 傑尼龜</h3>
+
+                <p>
+                    傑尼龜是水屬性的寶可夢，
+                    可以利用水系招式進行攻擊。
+                </p>
+
+                <ul>
+                    <li>屬性：💧 水</li>
+                    <li>特色：龜殼與水系招式</li>
+                    <li>進化：卡咪龜 → 水箭龜</li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="button-area">
+        <a href="/" class="home-button">← 回首頁</a>
+    </div>
+
+</main>
+
+
+<footer>
+    <p>© 2026 黃彥程 學習歷程檔案 | Pokémon</p>
+</footer>
+
+</body>
+
+</html>
 
